@@ -1,6 +1,7 @@
 import FaqSection from "../components/faq";
 import Nav from "../components/nav";
 import { cards } from "../constant/arr";
+import { fwog } from "../constant/info";
 
 export default function Home() {
   return (
@@ -179,7 +180,7 @@ export default function Home() {
             </button>
           </div>
         </section>
-         <FaqSection></FaqSection>
+        <FaqSection></FaqSection>
         {/* fwog army */}
         <section className="py-16 px-4 md:px-10 w-full flex flex-col items-center gap-10 mt-10">
           <div className="text-center space-y-4">
@@ -192,16 +193,16 @@ export default function Home() {
           </div>
 
           <div className="flex gap-8 flex-wrap justify-center">
-            {["discord", "telegram", "twitter"].map((platform, i) => (
-              <a
-                key={i}
-                href="/"
-                className="text-white font-medium capitalize flex items-center gap-2"
-              >
-                <img src="" alt={`${platform} icon`} className="w-6 h-6" />
-                {platform}
-              </a>
-            ))}
+            <div className="flex gap-6">
+              {fwog.map((info, index) => (
+                <div key={index} className="">
+                  <a href="/" target="_self">
+                    <img className="w-12 h-12" src={info.image} alt="" />
+                  </a>
+                  <p className="text-white capitalize font-semibold">{info.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div>

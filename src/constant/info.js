@@ -41,3 +41,18 @@ export const FAQ = [
     text: "Frogs are life, man. Green ones got famous, forgot their roots, and left Redfwog in the dust. Now it’s personal, red vs. green, underdog vs. elite. It’s not just drama; it’s a meme war with extra spice",
   },
 ];
+
+export const fwog = [
+  {
+    text: "discord",
+    image: "/images/discord.png",
+  },
+  {
+    text: "telegram",
+    image: "/images/telegram.png",
+  },
+  {
+    text: "twitter",
+    image: "/images/twitter.png",
+  },
+];
