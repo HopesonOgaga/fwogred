@@ -1,3 +1,5 @@
 export default function FwogMap (){
-    return <section></section>
+    return <section>
+        
+    </section>
 }

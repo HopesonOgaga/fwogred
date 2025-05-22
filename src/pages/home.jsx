@@ -1,6 +1,7 @@
 import Carousel from "../components/cariusek";
 import FaqSection from "../components/faq";
 import Nav from "../components/nav";
+import TokenomicsSection from "../components/token";
 import { cards } from "../constant/arr";
 import { fwog } from "../constant/info";
 
@@ -92,6 +93,10 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* toekn */}
+
+        <TokenomicsSection></TokenomicsSection>
 
         {/* fwog roll */}
         <section className="py-12 px-4 bg-gradient-to-r from-black to-red-600 flex flex-col items-center">
