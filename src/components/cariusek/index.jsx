@@ -13,7 +13,7 @@ export const card_slide = [
   },
   {
     title: "Pick a Side",
-    text: "Now, with dank memes flowing like trench water and his misfit army hyping him up, Redfwog’s clout is spiking. The green frog elite? Shaking. The question is: You sticking with those basic, slimy sellouts, or riding with the red revolution? Join the Red Society, fam—before we’re too cool for you!",
+    text: "Now, with dank memes flowing like trench water and his misfit army hyping him up, Redfwog’s clout is spiking. The green frog elite? Shaking. The question is: You sticking with those basic, slimy sellouts, or riding with the red revolution? Join the Red Society, fam—before we’re too cool for you!",
     image: "/images/redice.png",
   },
 ];
@@ -38,9 +38,50 @@ export default function Carousel() {
         the <span className="text-red-800">redfwog</span> lore
       </h2>
 
-      <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl items-center justify-center">
+      {/* Mobile Layout */}
+      <div className="md:hidden w-full max-w-xl border-4 border-red-700 p-6 rounded-lg shadow-lg bg-red-800">
+        <div className="flex justify-center mb-4">
+          <img
+            src={currentSlide.image}
+            alt="Gameboy screen"
+            className="max-w-full h-auto"
+          />
+        </div>
+        <h3 className="text-red-200 text-lg font-bold mb-2 text-center">
+          {currentSlide.title}
+        </h3>
+        <p className="text-white text-sm leading-relaxed mb-6 text-center">
+          {currentSlide.text}
+        </p>
+        <div className="flex flex-col gap-4 items-center">
+          <div className="flex justify-around w-full">
+            <img src="/images/logbutton.png" alt="Log button" />
+            <div className="flex gap-4">
+              <img src="/images/A Button.png" alt="A button" className="w-14 h-14" />
+              <img src="/images/B Button.png" alt="B button" className="w-16 h-16" />
+            </div>
+          </div>
+          <div className="flex gap-6">
+            <img
+              src="/images/Back Button.png"
+              alt="Back button"
+              onClick={prevSlide}
+              className="cursor-pointer"
+            />
+            <img
+              src="/images/Next Button.png"
+              alt="Next button"
+              onClick={nextSlide}
+              className="cursor-pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden md:flex w-full max-w-6xl items-center justify-center gap-10">
         {/* GameBoy Console */}
-        <div className="border-4 border-red-700 w-full md:w-1/3 p-6 rounded-lg shadow-lg bg-red-800 h-[80vh]">
+        <div className="border-4 border-red-700 w-1/3 p-6 rounded-lg shadow-lg bg-red-800">
           <div className="flex justify-center mb-6">
             <img
               src={currentSlide.image}
@@ -52,16 +93,8 @@ export default function Carousel() {
             <div className="flex justify-around w-full">
               <img src="/images/logbutton.png" alt="Log button" />
               <div className="flex gap-4">
-                <img
-                  src="/images/A Button.png"
-                  alt="A button"
-                  className="w-14 h-14"
-                />
-                <img
-                  src="/images/B Button.png"
-                  alt="B button"
-                  className="w-16 h-16"
-                />
+                <img src="/images/A Button.png" alt="A button" className="w-14 h-14" />
+                <img src="/images/B Button.png" alt="B button" className="w-16 h-16" />
               </div>
             </div>
             <div className="flex gap-6">
@@ -81,9 +114,11 @@ export default function Carousel() {
           </div>
         </div>
 
-        {/* Lore Text */}
-        <div className="border-4 border-red-700 rounded-lg shadow-lg w-full md:w-1/2 p-6 bg-black bg-opacity-30 max-h-[400px] overflow-y-auto">
-          <h3 className="text-red-500 text-xl font-bold mb-4">{currentSlide.title}</h3>
+        {/* Centered Text Box */}
+        <div className="border-4 border-red-700 rounded-lg shadow-lg w-1/2 p-6 bg-black bg-opacity-30 max-h-[400px] overflow-y-auto text-center self-center">
+          <h3 className="text-red-500 text-xl font-bold mb-4">
+            {currentSlide.title}
+          </h3>
           <p className="text-white text-sm leading-relaxed">
             {currentSlide.text}
           </p>
