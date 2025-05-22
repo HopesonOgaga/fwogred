@@ -1,3 +1,4 @@
+import Carousel from "../components/cariusek";
 import FaqSection from "../components/faq";
 import Nav from "../components/nav";
 import { cards } from "../constant/arr";
@@ -62,62 +63,7 @@ export default function Home() {
         </section>
 
         {/* gaming section */}
-        <section className="bg-gradient-to-r from-black to-red-600 w-full py-12 px-4 flex flex-col items-center">
-          <h2 className="text-white font-semibold text-3xl sm:text-4xl md:text-5xl capitalize text-center mb-10">
-            the <span className="text-red-800">redfwog</span> lore
-          </h2>
-
-          <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl items-center justify-center">
-            {/* GameBoy Console */}
-            <div className="border-4 border-red-700 w-full md:w-1/3 p-6 rounded-lg shadow-lg bg-red-800 h-[70vh]">
-              <div className="flex justify-center mb-6">
-                <img
-                  src="/images/save.png"
-                  alt="Gameboy screen"
-                  className="max-w-full h-auto"
-                />
-              </div>
-              <div className="flex flex-col gap-6 items-center">
-                <div className="flex justify-around w-full">
-                  <img src="/images/logbutton.png" alt="Log button" />
-                  <div className="flex gap-4">
-                    <img
-                      src="/images/A Button.png"
-                      alt="A button"
-                      className="w-14 h-14"
-                    />
-                    <img
-                      src="/images/B Button.png"
-                      alt="B button"
-                      className="w-16 h-16"
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <img src="/images/Back Button.png" alt="Back button" />
-                  <img src="/images/Next Button.png" alt="Next button" />
-                </div>
-              </div>
-            </div>
-
-            {/* Lore Text */}
-            <div className="border-4 border-red-700 rounded-lg shadow-lg w-full md:w-1/2 p-6 bg-black bg-opacity-30 max-h-[400px] overflow-y-auto">
-              <p className="text-white text-sm leading-relaxed">
-                In the lush swamps of Verdant Vale, Fwog a curious young
-                amphibian, discovers an ancient lily pad inscribed with a
-                propehcy. It speaks of a hidden real where the Great toadstone
-                lies. A gem that can resstore balance to the swamp. Driven by
-                destiny, Fwog sets out leaving the safety of home to face
-                unknown perils.In the lush swamps of Verdant Vale, Fwog a
-                curious young amphibian, discovers an ancient lily pad inscribed
-                with a propehcy. It speaks of a hidden real where the Great
-                toadstone lies. A gem that can resstore balance to the swamp.
-                Driven by destiny, Fwog sets out leaving the safety of home to
-                face unknown perils.
-              </p>
-            </div>
-          </div>
-        </section>
+          <Carousel></Carousel>
 
         {/* why croak with us */}
         <section className="px-4 py-12 w-full">
@@ -199,7 +145,9 @@ export default function Home() {
                   <a href="/" target="_self">
                     <img className="w-12 h-12" src={info.image} alt="" />
                   </a>
-                  <p className="text-white capitalize font-semibold">{info.text}</p>
+                  <p className="text-white capitalize font-semibold">
+                    {info.text}
+                  </p>
                 </div>
               ))}
             </div>
