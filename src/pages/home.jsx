@@ -56,11 +56,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button className="w-12 h-8 text-white capitalize bg-black rounded-2xl shadow-xl">
               next
             </button>
-          </div>
+          </div> */}
         </section>
 
         {/* gaming section */}
