@@ -1,3 +1,4 @@
+import { Link, Links } from "react-router-dom";
 import Carousel from "../components/cariusek";
 import FaqSection from "../components/faq";
 import Nav from "../components/nav";
@@ -9,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Nav></Nav>
-      <section className="bg-gradient-to-r from-black to-red-600 min-h-screen px-4 sm:px-6 w-full">
+      <section className="bg-gradient-to-r from-black to-red-600 min-h-screen px-4 sm:px-6 w-full scroll-smooth">
         <section className="flex flex-col gap-20 w-full min-h-screen">
           <div className="flex md:justify-between justify-around w-full min-h-screen items-center flex-col-reverse md:flex-row">
             <div className="flex flex-col gap-6 text-center md:text-left">
@@ -28,12 +29,17 @@ export default function Home() {
                 The degen meme coin Avax didn’t know it needed.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
-                <button className="text-white font-medium text-sm sm:text-lg capitalize border-2 border-red-600 bg-black-800 w-32 h-10 rounded-xl">
-                  join the pond
-                </button>
-                <button className="text-white font-medium text-sm sm:text-lg capitalize border-2 border-red-600 bg-black-800 w-32 h-10 rounded-xl">
-                  buy red fwog
-                </button>
+                <Link to={"https://t.me/Redfwog"}>
+                  {" "}
+                  <button className="text-white font-medium text-sm sm:text-lg capitalize border-2 border-red-600 bg-black-800 w-32 h-10 rounded-xl">
+                    join the pond
+                  </button>
+                </Link>
+                <Link to={"https://x.com/itsaredfwog "}>
+                  <button className="text-white font-medium text-sm sm:text-lg capitalize border-2 border-red-600 bg-black-800 w-32 h-10 rounded-xl">
+                    follow on x
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -64,10 +70,12 @@ export default function Home() {
         </section>
 
         {/* gaming section */}
+        <section id="about">
           <Carousel></Carousel>
+        </section>
 
         {/* why croak with us */}
-        <section className="px-4 py-12 w-full">
+        <section className="px-4 py-12 w-full" id="">
           <div className="mb-10 text-center">
             <h2 className="capitalize text-3xl md:text-5xl font-bold text-white">
               why <span className="text-red-800">croak</span> with us
@@ -95,8 +103,10 @@ export default function Home() {
         </section>
 
         {/* toekn */}
-
-        <TokenomicsSection></TokenomicsSection>
+        <section id="tokenomics">
+          {" "}
+          <TokenomicsSection id=""></TokenomicsSection>
+        </section>
 
         {/* fwog roll */}
         <section className="py-12 px-4 bg-gradient-to-r from-black to-red-600 flex flex-col items-center">
@@ -131,7 +141,10 @@ export default function Home() {
             </button>
           </div>
         </section>
-        <FaqSection></FaqSection>
+        <section id="faqs">
+          <FaqSection></FaqSection>
+        </section>
+
         {/* fwog army */}
         <section className="py-16 px-4 md:px-10 w-full flex flex-col items-center gap-10 mt-10">
           <div className="text-center space-y-4">
@@ -145,9 +158,9 @@ export default function Home() {
 
           <div className="flex gap-8 flex-wrap justify-center">
             <div className="flex gap-6">
-              {fwog.map((info, index) => (
+              {fwog.map((info, index, path) => (
                 <div key={index} className="">
-                  <a href="/" target="_self">
+                  <a href={info.path} target="_blank" rel="noreferrer">
                     <img className="w-12 h-12" src={info.image} alt="" />
                   </a>
                   <p className="text-white capitalize font-semibold">

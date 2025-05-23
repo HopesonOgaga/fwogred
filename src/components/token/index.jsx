@@ -99,7 +99,7 @@ export default function TokenomicsSection() {
                 <strong>Ticker:</strong> $REDFWOG
               </li>
               <li>
-                <strong>Total Supply:</strong> 1,000,000
+                <strong>Total Supply:</strong> 1,000,000,000
               </li>
               <li>
                 <strong>Blockchain:</strong> Avalanche (AVAX)

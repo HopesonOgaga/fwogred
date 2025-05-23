@@ -1,23 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const menuItems = [
-  { key: "about", path: "" },
-  { key: "how to buy", path: "howtobuy" },
-  { key: "tokenomics", path: "tokenomics" },
-  { key: "roadmap", path: "roadmap" },
-  { key: "ecosystem", path: "ecosystem" },
-  { key: "faqs", path: "faqs" },
-  { key: "disclaimer", path: "disclaimer" }
+  { key: "about", id: "about" },
+  // { key: "how to buy", id: "howtobuy" },
+  { key: "tokenomics", id: "tokenomics" },
+  { key: "roadmap", id: "roadmap" },
+  // { key: "ecosystem", id: "ecosystem" },
+  { key: "faqs", id: "faqs" },
+  // { key: "disclaimer", id: "disclaimer" }
 ];
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="p-6  relative z-50">
+    <nav className="p-6 relative z-50">
       <div className="flex items-center justify-between">
-        {/* Logo */}
         <div>
           <img
             src="/images/Fwog Logo.png"
@@ -26,7 +24,6 @@ export default function Nav() {
           />
         </div>
 
-        {/* Hamburger Icon */}
         <button
           className="text-white text-3xl md:hidden z-50"
           onClick={() => setIsOpen(!isOpen)}
@@ -37,14 +34,14 @@ export default function Nav() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex text-xl items-center gap-6 text-white font-semibold capitalize">
-          {menuItems.map(({ key, path }) => (
+          {menuItems.map(({ key, id }) => (
             <li key={key}>
-              <Link
-                to={`/${path}`}
+              <a
+                href={`#${id}`}
                 className="hover:text-navredpink transition-colors duration-200"
               >
                 {key}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -52,26 +49,26 @@ export default function Nav() {
 
       {/* Sliding Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3  text-white transform transition-transform duration-300 ease-in-out z-40 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-2/3 text-white transform transition-transform duration-300 ease-in-out z-40 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <ul className="flex flex-col mt-24 space-y-6 text-lg font-semibold capitalize p-6">
-          {menuItems.map(({ key, path }) => (
+          {menuItems.map(({ key, id }) => (
             <li key={key}>
-              <Link
-                to={`/${path}`}
+              <a
+                href={`#${id}`}
                 className="block hover:text-navredpink transition-colors duration-200"
-                onClick={() => setIsOpen(false)} // close menu after click
+                onClick={() => setIsOpen(false)}
               >
                 {key}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Optional: Overlay when menu is open */}
+      {/* Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"

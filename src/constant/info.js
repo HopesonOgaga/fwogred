@@ -43,16 +43,18 @@ export const FAQ = [
 ];
 
 export const fwog = [
-  {
-    text: "discord",
-    image: "/images/discord.png",
-  },
+  // {
+  //   text: "discord",
+  //   image: "/images/discord.png",
+  // },
   {
     text: "telegram",
     image: "/images/telegram.png",
+    path :"https://t.me/Redfwog"
   },
   {
     text: "twitter",
     image: "/images/twitter.png",
+    path:"https://x.com/itsaredfwog "
   },
 ];
