@@ -2,7 +2,7 @@ export const cards = [
   {
     image: "/images/casino.png",
     title: "Cold Stake",
-    text: "Hold $REDFWOG, earn rewards. No pools, no stress — you chill, we thrill.",
+    text: "Hold $REDFWOG, earn rewards. No pools, no stress.",
   },
   {
     image: "/images/moneyhand.png",

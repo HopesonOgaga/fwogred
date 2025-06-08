@@ -17,13 +17,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 text-center md:text-left">
               <div>
                 <p className="capitalize font-bold text-4xl sm:text-5xl text-white">
-                  <span className="text-red-700">Ribbit </span> For Gains.
-                </p>
-                <p className="capitalize font-bold text-4xl sm:text-5xl text-white">
-                  <span className="text-red-700">red </span>fwog
-                </p>
-                <p className="capitalize font-bold text-4xl sm:text-5xl text-white">
-                  <span className="text-red-700">run </span>it back
+                  the real trenchs Fwog
                 </p>
               </div>
               <p className="text-white text-sm sm:text-base">
