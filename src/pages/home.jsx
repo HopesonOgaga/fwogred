@@ -5,6 +5,7 @@ import Nav from "../components/nav";
 import TokenomicsSection from "../components/token";
 import { cards } from "../constant/arr";
 import { fwog } from "../constant/info";
+import { fwogCards } from "../constant/fwogroll";
 
 export default function Home() {
   return (
@@ -117,16 +118,25 @@ export default function Home() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 w-full">
-            {cards.map((card, index) => (
+            {fwogCards.map((card, index) => (
               <article
                 key={index}
                 className="bg-gray-950 w-full sm:w-[45%] lg:w-[20%] border-4 border-red-600 rounded-lg shadow-md p-4 flex flex-col lg:gap-8 items-start"
               >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-20 h-auto mb-4"
-                />
+                <div
+                  className={`${
+                    index === fwogCards.length - 1 ? "flex gap-2" : ""
+                  } w-full mb-4`}
+                >
+                  {card.images.map((imgSrc, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={imgSrc}
+                      alt={`${card.title} image ${imgIndex + 1}`}
+                      className="w-16 h-auto"
+                    />
+                  ))}
+                </div>
                 <h3 className="text-xl font-bold text-white mb-2">
                   {card.title}
                 </h3>
