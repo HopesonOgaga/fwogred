@@ -4,7 +4,7 @@ const menuItems = [
   { key: "about", id: "about" },
   // { key: "how to buy", id: "howtobuy" },
   { key: "tokenomics", id: "tokenomics" },
-  { key: "roadmap", id: "roadmap" },
+  { key: "roadmap", id: "map" },
   // { key: "ecosystem", id: "ecosystem" },
   { key: "faqs", id: "faqs" },
   // { key: "disclaimer", id: "disclaimer" }

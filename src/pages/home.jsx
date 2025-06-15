@@ -6,6 +6,7 @@ import TokenomicsSection from "../components/token";
 import { cards } from "../constant/arr";
 import { fwog } from "../constant/info";
 import { fwogCards } from "../constant/fwogroll";
+import FwogMap from "../components/fowgmap";
 
 export default function Home() {
   return (
@@ -144,6 +145,9 @@ export default function Home() {
               buy red fwog
             </button>
           </div>
+        </section>
+        <section id="map">
+          <FwogMap></FwogMap>
         </section>
         <section id="faqs">
           <FaqSection></FaqSection>

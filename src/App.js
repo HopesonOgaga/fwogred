@@ -13,6 +13,7 @@ function App() {
         <Route path="/game" element={<Carousel></Carousel>}></Route>
         <Route path="/map" element={<FwogMap></FwogMap>}></Route>
         <Route path="/token" element={<TokenomicsSection></TokenomicsSection>}></Route>
+        <Route path="/roadmap" element ={<FwogMap></FwogMap>}></Route>
       </Routes>
     </BrowserRouter>
   );
